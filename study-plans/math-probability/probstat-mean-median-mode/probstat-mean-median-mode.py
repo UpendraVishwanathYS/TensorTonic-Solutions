@@ -8,6 +8,6 @@ def mean_median_mode(x: list) -> dict:
     """
     count = dict(Counter(x))
 
-    smallest_mode = min({key: value for key, value in count.items() if value == max(count.values())}.keys())
+    mode = min({key: value for key, value in count.items() if value == max(count.values())}.keys())
     
-    return {'mean':np.mean(x).astype(np.float64), 'median':np.median(x).astype(np.float64), 'mode':float(smallest_mode)}
+    return {'mean':np.mean(x).astype(np.float64), 'median':np.median(x).astype(np.float64), 'mode':float(mode)}
